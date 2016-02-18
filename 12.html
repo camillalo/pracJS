@@ -1,0 +1,82 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .modal-open,
+        .modal-open .navbar-fixed-top,
+        .modal-open .navbar-fixed-bottom {
+            margin-right: 0;
+        }
+        .modal {
+            bottom: auto;
+            padding: 0;
+            background-color: #ffffff;
+            border: 1px solid #999999;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+            background-clip: padding-box;
+            overflow-y: auto;
+        }
+        .modal.container {
+            max-width: none;
+        }
+        #firstmodal {
+            width: 98%;
+            height: 98%;
+        }
+        #secondmodal {
+            width: 99%;
+            height: 99%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $('#m1').on("click", function() {
+                $('#firstmodal').modal();
+            });
+            $('#m2').on("click", function () {
+                $('#secondmodal').modal();
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="content" style="margin-left: 100px;margin-top: 100px;">
+    <button class="btn btn-primary btn-lg" id="m1">打开第一层模态窗口</button>
+</div>
+<div id="firstmodal" class="modal container fade" tabindex="-1" style="display: none;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">第一层模态窗口</h4>
+    </div>
+    <div class="modal-body">
+        <p>
+            <button class="btn btn-primary btn-lg" id="m2">打开第二层模态窗口</button>
+            第一层主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容
+        </p>
+    </div>
+    <div class="modal-footer" style="text-align: center;">
+        <button type="button" data-dismiss="modal" class="btn btn-default">关闭</button>
+    </div>
+</div>
+<div id="secondmodal" class="modal container fade" tabindex="-1" style="display: none;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">第二层模态窗口</h4>
+    </div>
+    <div class="modal-body">
+        <p>
+            第二层主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容
+           内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容主体内容
+        </p>
+    </div>
+    <div class="modal-footer" style="text-align: center;">
+        <button type="button" data-dismiss="modal" class="btn btn-default">关闭</button>
+    </div>
+</div>
+</body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>获取当前时间并显示在显示在屏幕上</title>
+    <STYLE type="text/css">
+        <!--
+        /*设置样式：无边框的文本框*/
+
+        INPUT {
+            font-size: 50px;
+            color: #CC0000;
+            border-style:none
+        }
+
+        -->
+    </STYLE>
+    <script>
+        function getTime(){
+            var time=new Date();
+            var hour=time.getHours();
+            var min=time.getMinutes();
+            var sec=time.getSeconds();
+            var ap='AM';
+            if(hour>12){
+                hour-=12;
+                ap="PM";
+            }
+            document.getElementById('myclock').value=hour+':'+min+':'+sec+' '+ap;
+            setTimeout("getTime()",1000);//1000毫秒后只执行一次该函数。。。而setInterval('getTime(),1000'),指每个1000毫秒执行一次该函数
+        }
+    </script>
+</head>
+<body onload="getTime()">
+    <label>Local Time is :
+        <input type="text" id="myclock" value=""/>
+    </label>
+</body>
+</html>

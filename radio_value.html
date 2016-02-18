@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>单选框以及输出选择的值</title>
+		<script>
+			function load(){
+				//use for examing the correction of specific code
+			// document.write("helle");
+			// alert('nihao');
+			// var txt=document.getElementsByTagName("p");//TagName是一个数组对象，所以再输出其值的时候需要具体指导下表才能输出
+			// document.write(txt[0].innerHTML);
+			// function test(){
+			// alert("hello");
+				var name=document.getElementsByName("fruit");
+				var len=name.length;
+				for(i=0;i<len;i++){
+					if (name[i].checked) {
+					alert(name[i].value);
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<!-- <p onClick="load()">你好</p> -->
+			<!-- <input type="button" value="button" onclick="test()"> -->
+		<form>
+			<input type="radio" name="fruit" value="apple">apple<p>
+			<input type="radio" name="fruit" value="pear">pear<p>
+			<input type="radio" name="fruit" value="orange">orange<p>
+			<input type="radio" name="fruit" value="banana">banana<p>
+			<input type="button" value="button" onClick="load()">
+		</form>
+	</body>
+</html>

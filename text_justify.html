@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table{ table-layout:fixed;width:50%;}
+        td{
+            border:1px solid;
+            padding:5px 20px;
+            background-color:#efefef;
+        }
+        .justify{
+            height:1.1em;
+            overflow:hidden;
+            text-align:justify;
+            text-justify :distribute-all-lines ;
+        }
+        div.cn:after {
+            content: "__________________________________________";
+            font-size:100px;
+        }
+        div.en:after {
+            content: " _______";
+        }
+    </style>
+</head>
+<body>
+<h1>利用text-align:justify完成单行文字两端对齐</h1>
+<table>
+    <tbody>
+    <tr>
+
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+        <td><div class="justify cn">四个字滴</div></td>
+        <td><div class="justify en">hi hi hi hi</div></td>
+    </tr>
+    <tr>
+        <td><div class="justify cn">五个字滴滴</div></td>
+        <td><div class="justify en">hi hi hi hi hi</div></td>
+    </tr>
+    <tr>
+        <td><div class="justify cn">空 格</div></td>
+        <td><div class="justify en">nono</div></td>
+    </tr>
+    </tbody>
+</table>
+<div class="justify cn">个 两个 三个字 四个字滴 五个字滴滴</div>
+<div class="justify en">aa bbbb cccccc dddddddd eeeeeeeeee</div>
+</body>
+</html>

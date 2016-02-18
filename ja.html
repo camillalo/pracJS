@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>javascript</title>
+    <script language="javascript">
+        //用BOM的Navigator对象查看浏览器相关信息,包括属性及方法
+        document.write('<p>'+navigator.appName+'</p>');
+        document.write('<p>'+navigator.appVersion+'</p>');
+//        alert(navigator.javaEnabled());
+
+        //BOM中有Screen对象，为客户端显示屏幕的信息，属性
+        document.write(screen.availHeight+'<br/>');
+        document.write(screen.availWidth+'<br/>');
+
+        //BOM中的History对象，有属性length：浏览器历史列表中ＵＲＬ个数，方法back(history列表中的前一个ＵＲＬ),forward(后一个),go(具体页面)history对象不再允许脚本访问已经访问过的实际URL,根据方法自动加载制定URL
+        document.write(history.length+'<br/>');
+        //DOM对象
+        document.write(document.lastModified+'<br/>');
+        document.writeln(document.title+'<br/>');//writeln方法没有作用
+        //element对象表示的就是HTML对象。该对象能对该元素的属性、样式进行编辑，查看，以及一些方法，例如元素的attributes属性，代表的就是整个元素的属性，当查看属性的个数时：attributes.length；
+        //attribute对象，Attr对象表示HTML属性，其属性及方法
+        document.getElementsByTagName("body").attributes[0].isId;
+
+
+
+        //location对象包含了有关当前URL的信息，是window对象的一部分，可用window.location来访问,属性有hash,host,hostname,href,pathname,port,protocol,search,,对象方法assign(),reload(),replace()
+
+        //直接的事件可以在页面加载的时候直接动作，但是函数必须被引用，有驱动才能使用
+        //也可以引用外部的JS文件
+        //document。write（中间可以写元素标签，可以识别执行）alert（中间写的元素标签会被当作文字打印出来）
+        //（语句、代码块、注释）
+        //没被封装的就是javascript语句，各种语句能封装成函数;可以用{}将代码整合成一个代码块，代码块也能在页面加载的时候自动执行
+        //变量
+        //生命一个变量，常用的变量类型：（字符串、数字、对象、NAN、数组），也可以生命一个元素标签类型的对象（能描述各种属性，如下book）,字符串变量如下monkeyName
+        //条件语句If else
+//        var monkeyName='kimi' +
+//                '2';
+//        document.write('<br/>');
+//        document.write(monkeyName+'<br/>');
+//        var book={
+//            name: "Don't lie to me",
+//            price:'$23',
+//            author:'willian'
+//        };
+        //javascript中本省自带的对象可以直接实例化new
+        //javascript是基于原型的语言但是却拥有new操作符，这让人很迷惑。在js中尽量少用new才是纯净的js,当不要一个对象是，直接obj={name:'luofang',age:22},数组也是一样arr=[1,2,3,]
+        //js是基于对象\原型的编程，对象继承对象，而不是类继承类，不是面向对象的编程，初级js工程师很少new一个对象，都是依靠程序内建已经new好的对象。new给对象分配空间。面向对象中new将一个类实例化。
+//        class Test{这是java中的类，js中没有这样的写法。在js中也是一样，当方法被声明为静态类时，可以直接用这个类去调用方法，如Math.random（）；非静态类时，需要new,如new Date().Hours();
+//            public static void say(){}
+//            public void speak(){}
+//        }
+//        当你say（），用法Test.say()
+//        当你speak()，用法new Test().speak();
+//        var Parent=function(){
+//            this.name='success';
+//            this.age='23';//必须使用this添加内部属性
+//            Parent.prototype.walk=function(){
+//                alert('nihao');
+//            }
+//        };//这样创建的一个对象需要new才能使用对象的属性
+//        Parent.prototype.getName=function(){
+//            return this.name;
+//        };
+//        alert(Parent.age);
+//        var aa=new Parent();
+//        document.write(aa.name);
+//        aa.walk();
+//      var a=new Date();
+//        var time1= a.getHours();
+//        if(time1<10){
+//            document.write('<br/>'+'早安'+'<br/>');
+//        }
+//        else{
+//            alert('<br/>'+'下午好'+'<br/>');
+//
+//        }
+//        document.getElementById('book').click(){
+//            alert('nihao');
+//        }
+//        function aa(){
+//            document.write('</br>');
+//            document.write(book.name);
+//            document.write('<br/>');
+//            book.price='$65';
+//            document.write(book.price);
+//            document.write('<br/>');
+//            book.topic='lie to you';
+//            book.content={};
+//        }
+
+//        var num=[7];
+//        num[0]=1;
+//        document.write(num[0]);
+//        document.write('</br>');
+//        document.write(num[1]);
+//        var arr=[1,2,3,4];
+//        document.write('</br>');
+//        document.write(arr.length);
+//        document.write('</br>');
+//        document.write(arra.length);
+//        //由于html的方式是从上之下，所以必须现在事件加载或者文档全部加载完成之后时间驱动才有效
+//        function load(){
+//            alert('this is a event caused by onload');
+//        }
+
+
+        //Math.random（）的取值范围是（0，1.0）乘以5后取值范围为（0，5）
+
+        document.write(parseInt('0Xb'));//将16进制的b用十进制表示
+        document.write('<br/>');
+        document.write(Math.floor('0Xb'));
+        var ran=Math.random()*11;
+        if(ran>0.5){
+            document.write('<br/>'+'我大于0.5'+'<br/>');
+        }else{
+            document.write('<br/>我小于0.5<br/>');
+
+        }
+//        document.write(ran);
+//        alert(parseInt(ran,8)+1);//这里的8表示进制，默认是10
+//        document.write(parseInt(ran,10));
+//        alert(Math.floor(ran));
+//        document.write(Math.floor(ran));
+
+        //javascript消息框
+        function click_but(txt) {
+//            alert('i am a warning' + '\n' + '这里换了行用字符集的\\n,这里\是转义符');
+//            alert(txt);
+            var aq = document.getElementsById("qq");
+            alert(aq.id);
+        }
+
+    </script>
+</head>
+<body onload="load()">
+<!--<script>-->
+<!--aa();-->
+<!--</script>-->
+<!--<p id="book" onclick="add()">nihao</p>-->
+<!--<br/>-->
+<!--<label onclick="tell()">click me! i'll tell you my name!</label>-->
+<!--<input type="button" id="qq" value="点击显示警告框" onclick="click_but('good morning')">-->
+
+<script>
+
+  //javascript中的循环for,while,do while,break,continue,For...in(使用这个可以遍历数组内元素)
+//var x;
+//var car=['宝马','奔驰','宾利'];
+//for(x in car){
+//document.write(car[x]+'<br/>');
+//}
+    //错误处理try...catch
+//    function error(){
+//        try{
+//            allert('hello');
+//        }catch(err){
+//            txt="this page has a error\n\n";
+//            txt+="description:"+err.description+"\n\n";
+//            txt+="点击确定继续";
+////            alert(txt);
+//            if(!confirm(txt)){//如果不是点击确认将改变页面地址
+//                document.location.href="http://www.baidu.com";
+//            }
+//
+//        }
+//    }
+//    var x=prompt('请输入0到10以内的数字','');
+////    if(y<0)//这是正常的判断方法，而不是输入值异常的判断方法
+////        alert('太小了');
+////    else if(y>10)
+////        alert("太大了");
+////    else if(isNaN(y))
+////        alert('不是数字');
+////    else
+////        alert('请输入值');
+////    输入值异常的判断
+//      try{
+////抛出异常throw 用“”包含异常的描述
+//          if(x>10)
+//              throw "Err1";
+//          else if(x<0)
+//              throw "Err2";
+//          else if(isNaN(x))
+//              throw "Err3";
+//      }
+//      catch(er)
+//      {
+//          if(er=="Err1")
+//              alert("错误！该值太大！");
+//          if(er == "Err2")
+//              alert("错误！该值太小！");
+//          if(er == "Err3")
+//              alert("错误！该值不是数字！")
+//      }
+    //onerror事件，当页面中出现错误时，就会自动产生这个事件，如果需要利用这个事件哎，就必须要创建一个处理错误的函数，我们可以把这个函数叫做onerror事件处理器，这个处理器使用三个参数来调用：msg(错误信息)，url(发生错误页面的URL),line（发生错误的代码行）
+    <!--onerror=errHandle;-->
+  <!--var txt="";-->
+  <!--function errHandle(msg,url,line){-->
+      <!--txt="this page has a error,i'll find it";-->
+      <!--txt+="error:"+msg+"\n\n";-->
+      <!--txt+="error's url is:"+url+"\n\n";-->
+      <!--txt+="line is:"+line+"\n\n";-->
+      <!--txt+="click the Ok to continue\n";-->
+      <!--alert(txt);-->
+      <!--return true;-->
+  <!--}-->
+    <!--function error(){-->
+        <!--alllert('你怎么又错啦！');-->
+    <!--}-->
+
+</script>
+<!--<button onclick="error()">查看错误原因</button>-->
+</body>
+<script type="text/javascript">
+    //输出文本
+//    document.write('hello hello');
+//    //生成标签描述的文本
+//    document.write('<br><b style="color: red">camille</b>');
+//    document.getElementById('book').innerText='22,hello this is the mean i will tell you';
+//    function tell(){
+//        alert('my name is camille'+'这是onclick()事件调用的方法');
+//    }
+//    function add(){
+//        //可以用元素下的innerHTML或这是innerText函数
+//        document.getElementById('book').innerText='11,hello this is the mean i will tell you';
+
+
+    //可以通过方法获取浏览器及版本，
+</script>
+</html>

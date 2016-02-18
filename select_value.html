@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>下拉框的只改变时，获取值，并弹出显示</title>
+
+</head>
+<body>
+<form >
+    <!--当选中的值有变化是，将这个选中的值进行输出-->
+    <label>水果：
+        <select onchange="getValue()">
+            <option >apple</option>
+            <option >pear</option>
+            <option >strawberry</option>
+            <option >orange</option>
+        </select>
+    </label>
+    <span id="span">0</span>
+    <!--<button class="get_value" name="提交" onclick="getValue()">提交</button>-->
+
+</form>
+</body>
+<script>
+   function getValue() {
+       var sel = document.getElementsByTagName('option');
+       var len = sel.length;
+       for (i = 0; i < len; i++) {
+           if (sel[i].selected) {
+               alert(sel[i].value);
+           }
+       }
+   }
+
+    //        function getValue(){
+    //            var sel=document.getElementsByTagName('option');
+    //            var len=sel.length;
+    ////            document.getElementsById('span').innerHTML('len');
+    //            for(i=0;i<len;i++){
+    //                if(sel.checked){
+    //                    alert('hello');
+    //                }
+    //            }
+    //        }
+
+
+</script>
+</html>
