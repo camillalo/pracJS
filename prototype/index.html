@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var arr=[1,2,3,4,5,'nihao'];
+    arr.push(6);
+    document.write(arr+arr.length+'<br/>');
+    arr.pop();
+    arr.pop();
+    document.write(arr+arr.length+'<br/>');
+    arr.reverse();
+    document.write(arr+'<br/>');
+    for(i in arr){
+        document.write(arr[i]+'<br/>')
+    }
+    document.write(arr.hasOwnProperty("name")+"____"+'<br/>')
+    var nihao="133",aa="12";
+    window.console.log(eval(13+13));
+    window.console.log(eval("var a=23;var b=13;a+b"));
+    window.console.log(eval(nihao+"13"));
+
+    var myeval = eval;	// 可能会抛出 EvalError 异常
+    document.write(myeval("2+3"));	// 可能会抛出 EvalError 异常
+    //document.write(prompt('nihao')) //prompt是提示框，可以进行输入，输入之后将会产生返回值，返回为输入的值
+//    try  {
+//        alert("Result:" + eval(prompt("Enter an expression:","")));
+//    }
+//    catch(exception) {
+//        alert(exception);
+//    }
+    window.console.log(parseInt(aa,16)+"---");
+</script>
+
+</body>
+</html>
